@@ -34,7 +34,7 @@ const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 //added 10/23
-const bookController = require('./controllers/book');
+const pricesController = require('./controllers/prices');
 
 /**
  * API keys and Passport configuration.
@@ -119,7 +119,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 app.get('/', homeController.index);
 
 //addedthis line 10/23
-app.get('/books', bookController.getBooks);
+app.get('/prices', pricesController.getPrices);
 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
