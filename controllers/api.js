@@ -582,7 +582,7 @@ exports.getLob = (req, res, next) => {
  * GET /api/upload
  * File Upload API example.
  */
- 
+
 exports.getFileUpload = (req, res, next) => {
   res.render('api/upload', {
     title: 'File Upload'
