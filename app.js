@@ -124,9 +124,9 @@ app.get('/', homeController.index);
 //addedthis line 10/23
 app.get('/prices', pricesController.getPrices);
 
-app.get('/createschedule', createscheduleController.getCreateschedule);
-app.get('/people', peopleController.getPeople);
-app.get('/shift_info', shift_infoController.getShift_info);
+app.get('/createschedule', passportConfig.isAuthenticated, createscheduleController.getCreateschedule);
+app.get('/people', passportConfig.isAuthenticated, peopleController.getPeople);
+app.get('/shift_info', passportConfig.isAuthenticated, shift_infoController.getShift_info);
 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
