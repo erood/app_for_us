@@ -36,6 +36,8 @@ const contactController = require('./controllers/contact');
 //added 10/23
 const pricesController = require('./controllers/prices');
 const createscheduleController = require('./controllers/createschedule');
+const peopleController = require('./controllers/people');
+const shift_infoController = require('./controllers/shift_info');
 
 /**
  * API keys and Passport configuration.
@@ -123,6 +125,8 @@ app.get('/', homeController.index);
 app.get('/prices', pricesController.getPrices);
 
 app.get('/createschedule', createscheduleController.getCreateschedule);
+app.get('/people', peopleController.getPeople);
+app.get('/shift_info', shift_infoController.getShift_info);
 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
