@@ -8,19 +8,15 @@
         span.icon-bar
       a.navbar-brand(href='/')
         i.fa.fa-cube
-        | Schedule.Me
+        | Project name
     .collapse.navbar-collapse
       ul.nav.navbar-nav
-        if !user
-          li(class=(title == 'Home') ? 'active' : undefined)
-            a(href='/') Home
-          li(class=(title == 'Contact') ? 'active' : undefined)
-            a(href='/contact') Contact
-          li
-            a(href='/prices') Pricing
-        else
-          li(class=(title == 'Create Schedule') ? 'active' : undefined)
-              a(href='/createschedule') Create Schedule
+        li(class=(title == 'Home') ? 'active' : undefined)
+          a(href='/') Home
+        li(class=(title == 'Contact') ? 'active' : undefined)
+          a(href='/contact') Contact
+        li
+          a(href='/prices') Pricing
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=(title == 'Login') ? 'active' : undefined)
