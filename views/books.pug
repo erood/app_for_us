@@ -7,3 +7,15 @@ block content
   ul
     for book in books
       li= book.name
+
+  head
+    script.
+      function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+      }
+
+
+  body
+    h1 JavaScript in Head
+    p#demo A Paragraph.
+    button(type='button', onclick='myFunction()') Try it
