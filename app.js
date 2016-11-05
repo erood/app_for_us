@@ -123,6 +123,7 @@ app.get('/', homeController.index);
 
 //addedthis line 10/23
 app.get('/prices', pricesController.getPrices);
+app.post('/prices', pricesController.postPrices);
 
 app.get('/createschedule', passportConfig.isAuthenticated, createscheduleController.getCreateschedule);
 app.get('/people', passportConfig.isAuthenticated, peopleController.getPeople);
